@@ -1,0 +1,54 @@
+.video_container {
+    width: 100%;
+    border: 0;
+    margin: 10px 0 15px 0;
+    cursor: pointer;
+}
+
+.video_thumbnail {
+    width: 100%;
+    overflow: hidden;
+}
+
+.thumbnails_img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.video_prograss {
+    margin-top: 10px;
+}
+
+.video_title{
+    font-size: 18px;
+    color: #000000;
+}
+
+.channel {
+    color: #A2A2A2;
+    margin-top: -2%;
+}
+
+.star_rate {
+    margin-top: -6%;
+    font-size: 15px;
+}
+
+.star_icon{
+    color: #FABA1C;
+}
+
+.view_section {
+    color: #A2A2A2;
+}
+
+.hr_style {
+    border: 0;
+    border-bottom: 2px dashed #c7c6c6;
+}
+
+@media (max-width: 778px) {
+    .video_title {
+        margin-top: 12px;
+    }
+}

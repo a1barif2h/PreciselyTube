@@ -1,0 +1,17 @@
+.video_player_container {
+    width: 100%;
+}
+
+.video_player {
+    width: 100%;
+    margin-top: 10px;
+    height: 450px;
+    border-radius: 25px;
+}
+
+
+@media (max-width: 778px) {
+    .video_player {
+        height: 250px;
+    }
+}

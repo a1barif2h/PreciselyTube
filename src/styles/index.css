@@ -1,0 +1,17 @@
+.progress-bar {
+    background-color: #371780;
+}
+
+.progress{
+    height: 8px;
+}
+
+.spiner_container .text-primary {
+    color: #6647E8!important;
+}
+
+.spiner_container .spinner-border  {
+    width: 120px;
+    height: 120px;
+    margin-top: 25px;
+}

@@ -1,0 +1,138 @@
+.video_details_container{
+    margin-top: 15px;
+}
+
+.tab_item_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab_item,
+.off_tab_item  {
+    padding: 15px;
+    background-color: #6647E8;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: -6px 12px 10px #b8acf5;
+}
+
+.off_tab_item {
+    background-color: #F2ECFF;
+    color: #6647E8;
+    box-shadow: none;
+}
+
+.tab_icon {
+    font-size: 28px;
+}
+
+.tab_title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.video_details_section{
+    margin-top: 45px;
+    padding: 15px;
+}
+
+.hase_tag {
+    font-size: 15px;
+    font-weight: 600;
+    color: #7AAD4A;
+}
+
+.tag_icon {
+    font-size: 18px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.title_container,
+.description_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    width: 75%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.title_icons {
+    font-size: 28px;
+}
+
+.channel {
+    font-size: 17px;
+    color: #C2C2C3;
+    margin-top: -10px;
+    font-weight: 600;
+}
+
+.channel:hover {
+    color: #7AAD4A;
+    cursor: pointer;
+}
+
+.description {
+    width: 75%;
+    font-size: 17px;
+}
+
+
+/*COMMING SOON PAGE CSS START*/
+
+.exampleStyle{
+    display: inline-block;
+    margin-Bottom: 1em;
+    padding: 2em 1em 1em 1em;
+    width: 100%;
+    font-Size: 3.5rem;
+    text-Align: center;
+    font-weight: bold;
+    color: #6647E8
+}
+
+@media (max-width: 778px) {
+    .tab_icon {
+        font-size: 17px;
+    }
+    
+    .tab_title {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .title_container,
+    .description_container {
+        display: block;
+    }
+
+    .title{
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .title_icons {
+        font-size: 28px;
+        text-align: right;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .video_details_star {
+        text-align: right;
+    }
+
+    .exampleStyle{
+        font-size: 1.5rem;
+    }
+}
