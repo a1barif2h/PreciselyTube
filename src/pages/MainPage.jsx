@@ -27,7 +27,6 @@ const MainPage = () => {
     };
 
     const handleVidoeSelect = video => setSelectedVideo(video);
-    console.log(typeof videos)
     return (
         <>
             <SearchBar handleSubmit={handleSubmit} />
