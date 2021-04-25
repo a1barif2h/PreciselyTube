@@ -16,7 +16,7 @@ const VideosList = ({videos, handleVidoeSelect}) => {
         scrollUp();
     }
     const renderVideo = videos.map(video => (
-        <VideoItem key={video.etag} video={video} handleFunc={handleFunc} handleVidoeSelect={handleVidoeSelect} />
+        <VideoItem key={video.etag} video={video} handleFunc={handleFunc} />
     ))
     return (
         <>

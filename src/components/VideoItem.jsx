@@ -15,7 +15,7 @@ export const starRate = <>
     <FontAwesomeIcon className={`ml-2`} icon={rStar} />
 </>
 
-const VideoItem = ({video, handleFunc,  handleVidoeSelect}) => {
+const VideoItem = ({video, handleFunc }) => {
     const img = video?.snippet?.thumbnails?.medium?.url;
     const discription = video?.snippet?.descrioption;
     const title = video?.snippet?.title.slice(0, 34);
