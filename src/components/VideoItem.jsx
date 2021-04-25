@@ -15,17 +15,16 @@ export const starRate = <>
     <FontAwesomeIcon className={`ml-2`} icon={rStar} />
 </>
 
-const VideoItem = ({video, handleVidoeSelect}) => {
+const VideoItem = ({video, handleFunc,  handleVidoeSelect}) => {
     const img = video?.snippet?.thumbnails?.medium?.url;
     const discription = video?.snippet?.descrioption;
     const title = video?.snippet?.title.slice(0, 34);
     const channel = video?.snippet?.channelTitle;
 
-
     return (
         <>
             <Col sm={12}>
-                <Card onClick={() => handleVidoeSelect(video)} className={Styles.video_container}>
+                <Card onClick={() => handleFunc(video)} className={Styles.video_container}>
                     <Row>
                         <Col md={6} className={Styles.video_thumbnail}>
                             <img className={Styles.thumbnails_img} src={img} alt={discription}/>

@@ -50,4 +50,12 @@
         height: auto;
         overflow: auto;
     }
+
+    .recommend_section  {
+        height: 35px;
+    }
+
+    .recommend_title {
+        font-size: 16px;
+    }
 }
