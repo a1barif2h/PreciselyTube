@@ -1,3 +1,26 @@
+.recommend_section  {
+    width: 40%;
+    text-align: center;
+    margin-top: 10px;
+    align-items: center;
+    background-color: #F1EDFF;
+    border-radius: 25px;
+    position: relative;
+    height: 40px;
+    cursor: pointer;
+}
+
+.recommend_title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #635F70;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: 15px; */
+}
+
 .videos_list_container {
     max-height: 130vh;
     overflow: hidden;

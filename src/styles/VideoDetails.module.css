@@ -15,6 +15,7 @@
     border-radius: 15px;
     cursor: pointer;
     box-shadow: -6px 12px 10px #b8acf5;
+    transition: ease-out ;
 }
 
 .off_tab_item {

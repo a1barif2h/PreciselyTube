@@ -6,35 +6,60 @@ import Styles from '../styles/VideoDetails.module.css';
 import CommingSoon from './CommingSoon';
 import { starRate } from './VideoItem';
 
+const styles = {
+    transition: 'all 1.5s ease-out',
+};
+
 const VideoDetails = ({video}) => {
     const [isOverviewClick, setIsOverviewClick] = useState(true);
     const [isNotesClick, setIsNotesClick] = useState(false);
     const [isReadingClick, setIsReadingClick] = useState(false);
     const [isDiscussionClick, setIsDiscussionClick] = useState(false);
 
+    const [overviewOpacity, setOverviewOpacity] = useState(1);
+    const [notesOpacity, setNotesOpacity] = useState(0);
+    const [readingOpacity, setReadingOpacity] = useState(0);
+    const [discussionOpacity, setDiscussionOpacity] = useState(0);
+
     const handleOverview = () => {
         setIsOverviewClick(true);
         setIsNotesClick(false);
         setIsReadingClick(false);
         setIsDiscussionClick(false);
+        setOverviewOpacity(1);
+        setNotesOpacity(0);
+        setReadingOpacity(0);
+        setDiscussionOpacity(0);
     };
     const handleNotes = () => {
         setIsOverviewClick(false);
         setIsNotesClick(true);
         setIsReadingClick(false);
         setIsDiscussionClick(false);
+        setOverviewOpacity(0);
+        setNotesOpacity(1);
+        setReadingOpacity(0);
+        setDiscussionOpacity(0);
     };
     const handleReading = () => {
         setIsOverviewClick(false);
         setIsNotesClick(false);
         setIsReadingClick(true);
         setIsDiscussionClick(false);
+        setOverviewOpacity(0);
+        setNotesOpacity(0);
+        setReadingOpacity(1);
+        setDiscussionOpacity(0);
     };
     const handleDiscussion = () => {
         setIsOverviewClick(false);
         setIsNotesClick(false);
         setIsReadingClick(false);
         setIsDiscussionClick(true);
+        setOverviewOpacity(0);
+        setNotesOpacity(0);
+        setReadingOpacity(0);
+        setDiscussionOpacity(1);
     };
 
     const handleDisplay = () => {
@@ -59,6 +84,7 @@ const VideoDetails = ({video}) => {
             <div className={Styles.video_details_container}>
                 <div className={Styles.tab_item_container}>
                     <div onClick={handleOverview} 
+                    style={{...styles}}
                     className={ 
                         `${handleDisplay() === "Overview" ? 
                         `${Styles.tab_item}` : 
@@ -67,13 +93,14 @@ const VideoDetails = ({video}) => {
                         <BsExclamationCircle onClick={handleOverview} className={Styles.tab_icon} />
                         {
                             (handleDisplay() === 'Overview') ? 
-                            <span className={Styles.tab_title}>
+                            <span style= {{opacity : `${overviewOpacity}`}} className={Styles.tab_title}>
                                 Overview
                             </span> : null
                         }
                         
                     </div>
                     <div onClick={handleNotes} 
+                    style={{...styles}}
                     className={
                         `${handleDisplay() === "Notes" ? 
                         `${Styles.tab_item}` : 
@@ -82,12 +109,13 @@ const VideoDetails = ({video}) => {
                         <BsPencilSquare className={Styles.tab_icon} />
                         {
                             (handleDisplay() === 'Notes') ? 
-                            <span className={Styles.tab_title}>
+                            <span style= {{opacity : `${notesOpacity}`}} className={Styles.tab_title}>
                                 Notes
                             </span> : null
                         }
                     </div>
                     <div onClick={handleReading} 
+                    style={{...styles}}
                     className={
                         `${handleDisplay() === "Reading material" ? 
                         `${Styles.tab_item}` : 
@@ -96,12 +124,13 @@ const VideoDetails = ({video}) => {
                         <FiBookOpen className={Styles.tab_icon} />
                         {
                             (handleDisplay() === 'Reading material') ? 
-                            <span className={Styles.tab_title}>
+                            <span style= {{opacity : `${readingOpacity}`}} className={Styles.tab_title}>
                                 Reading material
                             </span> : null
                         }
                     </div>
                     <div onClick={handleDiscussion} 
+                    style={{...styles}}
                     className={
                         `${handleDisplay() === "Discussion forum" ? 
                         `${Styles.tab_item}` : 
@@ -110,7 +139,7 @@ const VideoDetails = ({video}) => {
                         <FiMessageSquare className={Styles.tab_icon} />
                         {
                             (handleDisplay() === 'Discussion forum') ? 
-                            <span className={Styles.tab_title}>
+                            <span style= {{opacity : `${discussionOpacity}`}} className={Styles.tab_title}>
                                 Discussion forum
                             </span> : null
                         }

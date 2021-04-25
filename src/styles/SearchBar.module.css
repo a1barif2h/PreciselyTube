@@ -21,10 +21,13 @@
     margin-top: -10px;
 }
 
-.submit_btn:hover {
+.submit_btn:hover,
+.submit_btn:focus,
+.submit_btn:active {
     color: #ffffff;
     background-color: #6746E6;
     border-color: #6746E6;
+    outline: 0;
 }
 
 @media (max-width: 778px) {

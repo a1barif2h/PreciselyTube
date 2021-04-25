@@ -8,7 +8,11 @@ import "../styles/index.css";
 import Styles from "../styles/VideoItem.module.css";
 
 export const starRate = <>
-<FontAwesomeIcon className={`${Styles.star_icon} ml-2`} icon={faStar} /><FontAwesomeIcon className={`${Styles.star_icon} ml-2`} icon={faStar} /><FontAwesomeIcon className={`${Styles.star_icon} ml-2`} icon={faStar} /><FontAwesomeIcon className={`ml-2`} icon={rStar} /><FontAwesomeIcon className={`ml-2`} icon={rStar} />
+    <FontAwesomeIcon className={`${Styles.star_icon} ml-2`} icon={faStar} />
+    <FontAwesomeIcon className={`${Styles.star_icon} ml-2`} icon={faStar} />
+    <FontAwesomeIcon className={`${Styles.star_icon} ml-2`} icon={faStar} />
+    <FontAwesomeIcon className={`ml-2`} icon={rStar} />
+    <FontAwesomeIcon className={`ml-2`} icon={rStar} />
 </>
 
 const VideoItem = ({video, handleVidoeSelect}) => {

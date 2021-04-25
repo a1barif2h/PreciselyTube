@@ -9,6 +9,9 @@ const VideosList = ({videos, handleVidoeSelect}) => {
     ))
     return (
         <>
+            <div className={Styles.recommend_section}>
+                <p className={Styles.recommend_title}>Recommended</p>
+            </div>
             <Row className={Styles.videos_list_container}>{renderVideo}</Row>
         </>
     );
